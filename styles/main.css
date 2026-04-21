@@ -8,12 +8,100 @@ body {
     margin: 0;
 }
 
+img,
+button {
+    display: block;
+}
+
+h1 {
+    margin: 0 0 15px 0;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.width-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
 #page-header {
     background-color: #fff;
-    padding: 40px;
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
+#page-header .width-container {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #page-logo {
     height: 25px;
+}
+
+#main-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+#main-menu ul li {
+    margin-right: 35px;
+}
+
+#main-menu ul li:last-child {
+    margin-right: 0;
+}
+
+#main-menu ul li a {
+    font-family: Lato, sans-serif;
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 200ms ease-out;
+}
+
+#main-menu ul li a.active {
+    color: #000;
+}
+
+#main-menu ul li a:hover {
+    color: #000;
+}
+
+#search-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+#hero-section {
+    background-color: #ededef;
+    padding: 100px 40px;
+    position: relative;
+}
+
+#hero-image {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 100%;
+}
+
+#hero-section p {
+    line-height: 1.5;
+    color: black;
+    padding: 5px 10px 5px 0px;
+    width: fit-content;
+    text-transform: uppercase;
 }

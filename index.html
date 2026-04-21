@@ -18,28 +18,50 @@
     </head>
     <body>
         <header id="page-header">
-            <img id="page-logo" src="./images/logo.svg" alt="Lian Company Logo" />
-            <nav id="main-menu">
-                <ul>
-                    <li>
-                        <a href="start.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="width-container">
+                <img id="page-logo" src="./images/logo.svg" alt="Lian Company Logo" />
+                <nav id="main-menu">
+                    <ul>
+                        <li>
+                            <a class="active" href="start.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <button id="search-button">
+                                <img src="./images/search.svg" alt="Open Search Panel" />
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main></main>
+        <main id="page-content">
+            <section id="hero-section">
+                <div class="width-container">
+                    <h1>About The Agency</h1>
+                    <p>Welcome to Lian</p>
+                </div>
+                <img
+                    id="hero-image"
+                    src="./images/hero-1.png"
+                    alt="An overhead shot of a person typing on a laptop."
+                />
+            </section>
+
+            <section id="about-section"></section>
+            <section id="team-section"></section>
+        </main>
         <footer></footer>
     </body>
 </html>
