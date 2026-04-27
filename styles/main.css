@@ -68,10 +68,24 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     transition: color 200ms ease-out;
+    position: relative;
 }
 
 #main-menu ul li a.active {
     color: #000;
+    padding-left: 25px;
+}
+
+#main-menu ul li a.active::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #main-menu ul li a:hover {
@@ -91,6 +105,10 @@ h1 {
     position: relative;
 }
 
+#hero-section .width-container {
+    position: relative;
+}
+
 #hero-image {
     position: absolute;
     top: 0px;
@@ -104,4 +122,89 @@ h1 {
     padding: 5px 10px 5px 0px;
     width: fit-content;
     text-transform: uppercase;
+}
+
+#about-section {
+    margin-top: 50px;
+    padding: 0 40px;
+
+    .width-container {
+        display: flex;
+        gap: 35px;
+    }
+
+    #about-image {
+        width: 50%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    #about-text {
+        width: 50%;
+    }
+
+    #skills {
+        margin-top: 35px;
+
+        .skill {
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            background-color: #ebebeb;
+            border: 4px solid #ebebeb;
+
+            .line {
+                height: 2px;
+                background-color: #a1a1a1;
+                position: relative;
+
+                .circle {
+                    position: absolute;
+                    right: 0;
+                    width: 4px;
+                    height: 4px;
+                    background-color: white;
+                    border: 3px solid black;
+                    border-radius: 50%;
+                    transform: translateY(-4px) translateX(50%);
+                }
+
+                .tooltip {
+                    position: absolute;
+                    padding: 5px 10px;
+                    font-size: 11px;
+                    background-color: black;
+                    color: white;
+                    font-family: 'Lato', sans-serif;
+                    right: 0;
+                    top: 0;
+                    transform: translateX(100%) translateY(-35px);
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 6px;
+                        height: 6px;
+                        background-color: black;
+                        transform: translateY(100%);
+                        background-image: linear-gradient(
+                            -45deg,
+                            white,
+                            white 50%,
+                            black 50%,
+                            black 100%
+                        );
+                    }
+                }
+            }
+        }
+    }
+}
+
+#team-section {
+    margin-top: 50px;
 }
